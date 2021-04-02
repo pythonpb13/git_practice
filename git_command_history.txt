@@ -732,3 +732,216 @@ $ history
 
 Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
 $
+
+
+
+
+
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ ^C
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   files.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_command_history.txt
+
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ ls
+README.md  files.txt  folders.txt  git_command_history.txt
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ vi files.txt
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   files.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   files.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_command_history.txt
+
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git add files.txt  git_command_history.txt
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git commit -m "changed and added files" git_command_history.txt  files.txt
+[master c6f4209] changed and added files
+ 2 files changed, 735 insertions(+)
+ create mode 100644 git_command_history.txt
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git push origin
+HEAD            master          origin/master
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git push origin master
+To https://github.com/pythonpb13/git_practice.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/pythonpb13/git_practice.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git pull origin
+HEAD     master
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git pull origin
+HEAD     master
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git pull origin
+HEAD     master
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 735 bytes | 49.00 KiB/s, done.
+From https://github.com/pythonpb13/git_practice
+ * branch            master     -> FETCH_HEAD
+   2cd8204..51107f6  master     -> origin/master
+Auto-merging files.txt
+CONFLICT (content): Merge conflict in files.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   files.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ vi files.txt
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   files.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git commit -m "fixed merge issues" files.txt
+fatal: cannot do a partial commit during a merge.
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git commit -c "fixed merge issues" files.txt
+fatal: could not lookup commit fixed merge issues
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git commit files.txt
+fatal: cannot do a partial commit during a merge.
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   files.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git add files.txt
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   files.txt
+
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git commit -m "fixed merged issues" files.txt
+fatal: cannot do a partial commit during a merge.
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git commit  files.txt
+fatal: cannot do a partial commit during a merge.
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   files.txt
+
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git commit -m "test" files.txt
+fatal: cannot do a partial commit during a merge.
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master|MERGING)
+$ git commit -m "test"
+[master 66f39d9] test
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git push origin
+FETCH_HEAD      HEAD            ORIG_HEAD       master          origin/master
+
+Lenovo@LAPTOP5NU5EP0H MINGW64 ~/Desktop/Bahubali/git_practice (master)
+$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 3.65 KiB | 1.82 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/pythonpb13/git_practice.git
+   51107f6..66f39d9  master -> master
+
+
